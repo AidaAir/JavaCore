@@ -17,19 +17,20 @@ public class Team {
         StringBuilder membersString = new StringBuilder();
         for (int i = 0; i < members.length; i++) {
             TeamMember member = members[i];
-            membersString.append(member.getName()).append(", ");
+            membersString.append(member.getName()).append(" ");
         }
         System.out.printf("Название команды: %s. Состав команды: %s%n", name, membersString);
     }
 
     public void showResults() {
-        String completedCourseMembers = "";
-        String notCompletedCourseMembers = "";
-        for(TeamMember member : members) {
+        StringBuilder completedCourseMembers = new StringBuilder();
+        StringBuilder notCompletedCourseMembers = new StringBuilder();
+        for (int i = 0; i < members.length; i++) {
+            TeamMember member = members[i];
             if (member.isPassDistance()) {
-                completedCourseMembers = completedCourseMembers + member.getName() + ","+" "; // если все препятствия пройдены, то записываем участника в список добравшихся к финишу
+                completedCourseMembers.append(member.getName()).append(" ");
             } else {
-                notCompletedCourseMembers = notCompletedCourseMembers + member.getName() + ","+" "; // иначе он лузер
+                notCompletedCourseMembers.append(member.getName()).append(" ");
             }
         }
 
