@@ -1,4 +1,4 @@
-package lesson1;
+package lesson1JavaCore;
 
 public class Team {
     private final String name;
@@ -39,4 +39,3 @@ public class Team {
                 name, completedCourseMembers, notCompletedCourseMembers);
     }
 }
-
